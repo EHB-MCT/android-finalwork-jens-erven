@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2021 The Android Open Source Project.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <!--        <variable-->
+        <!--            name="viewModel"-->
+        <!--            type="com.example.android.marsphotos.overview.OverviewViewModel" />-->
+        <variable
+            name="photo"
+            type="com.example.android.marsphotos.network.NewsPhoto" />
+    </data>
+    <LinearLayout
+        android:foreground="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="top"
+        android:paddingTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingBottom="16dp"
+        android:paddingEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#4B0078">
+<!--        #4B0078-->
+
+        <ImageView
+            android:gravity="center_vertical"
+            android:id="@+id/avatar"
+            android:layout_width="100dp"
+            android:layout_height="115dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            app:imageUrl="@{photo.preview_image}"
+            tools:src="@tools:sample/backgrounds/scenic" />
+        <LinearLayout
+            android:paddingLeft="15dp"
+            android:layout_marginLeft="0dp"
+            android:layout_width="0dp"
+            android:layout_height="115dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="top"
+            android:background="@drawable/article_background_gradient">
+
+            <TextView
+                android:layout_marginTop="7dp"
+                tools:text="Hier is de titel"
+                android:gravity="top"
+                android:id="@+id/list_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pt_serif_bold"
+                android:text="@{photo.title}"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="top">
+                <View
+                    android:layout_gravity="top"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/stroke_background"/>
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    tools:text="2 dagen geleden"
+                    android:gravity="top"
+                    android:id="@+id/list_subtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@{photo.daysAgo}"
+                    android:textColor="#F2B751"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</layout>

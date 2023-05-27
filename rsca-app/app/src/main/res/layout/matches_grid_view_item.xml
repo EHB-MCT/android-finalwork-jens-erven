@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+    <data>
+        <import type="com.example.android.marsphotos.BindingAdaptersKt"/>
+        <variable
+            name="photo"
+            type="com.example.android.marsphotos.network.MatchPhoto" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#4B0078"
+
+       >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/rectangle_background"
+            android:textAllCaps="true"
+            android:elevation="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@{photo.scheduled_date}"
+            android:textColor="#111111"
+            android:textSize="14sp" />
+    <LinearLayout
+
+        android:background="@drawable/card_background"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+
+
+            android:gravity="center_vertical"
+            android:id="@+id/home_team_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/anderlecht_logo_vector" />
+
+        <LinearLayout
+
+            android:id="@+id/parent_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+        <TextView
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            tools:text="UEFA EUROPA CONFERENCE LEAGUE"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:id="@+id/list_text"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@{photo.league_name}"
+            android:textColor="@color/white"
+            android:textSize="14dp"/>
+            <TextView
+
+                android:gravity="center_vertical"
+                android:textSize="22dp"
+                android:text="@{photo.score_results}"
+                android:textColor="#F2B751"
+                android:fontFamily="@font/pt_serif_bold"
+                android:id="@+id/score_results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+    </LinearLayout>
+
+        <ImageView
+
+
+            android:gravity="center_vertical"
+            android:id="@+id/visiter_team_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{photo.outmatch ? null: photo.opponent_logo}"
+            android:src="@{photo.outmatch ? @drawable/anderlecht_logo_vector: null}"/>
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</layout>

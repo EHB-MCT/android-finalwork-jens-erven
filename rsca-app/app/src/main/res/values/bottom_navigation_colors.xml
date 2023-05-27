@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottom_navigation_selected">#FF0000</color> <!-- Selected icon color -->
+    <color name="bottom_navigation_unselected">#CCCCCC</color> <!-- Unselected icon color -->
+    <color name="bottom_navigation_disabled">#999999</color> <!-- Disabled icon color -->
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2021 The Android Open Source Project.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+<!--        <variable-->
+<!--            name="viewModel"-->
+<!--            type="com.example.android.marsphotos.overview.OverviewViewModel" />-->
+        <variable
+            name="photo"
+            type="com.example.android.marsphotos.network.Employee" />
+    </data>
+    <LinearLayout
+        android:foreground="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingBottom="16dp"
+        android:paddingEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#4B0078">
+
+
+        <ImageView
+            android:gravity="center_vertical"
+            android:id="@+id/avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            app:imageUrl="@{photo.avatar}"
+            tools:src="@tools:sample/backgrounds/scenic" />
+        <LinearLayout
+            android:paddingLeft="15dp"
+            android:layout_marginLeft="0dp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:background="@drawable/article_background_gradient">
+
+            <TextView
+                tools:text="Dirk Janssens"
+                android:gravity="center_vertical"
+                android:id="@+id/list_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@{photo.fullname}"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                tools:text="AANVALLER"
+                android:gravity="center_vertical"
+                android:id="@+id/list_subtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@{photo.category}"
+                android:textColor="#F2B751"
+                android:textSize="14dp" />
+        </LinearLayout>
+        <TextView
+
+            android:visibility="@{photo.shirt_number != null ? View.VISIBLE : View.GONE}"
+            android:fontFamily="@font/roboto_bold"
+            android:background="@drawable/circle_background"
+            android:text="@{photo.shirt_number}"
+            android:gravity="center"
+            android:id="@+id/shirt_number"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textColor="#3C1053"
+            tools:text="14"
+           />
+
+
+
+
+    </LinearLayout>
+
+
+
+</layout>
+

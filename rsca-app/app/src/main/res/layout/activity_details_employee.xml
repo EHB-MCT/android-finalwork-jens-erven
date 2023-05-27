@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/employee_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:fontFamily="@font/pt_serif_bold"
+        android:text="16"
+        android:textSize="29dp"
+        android:id="@+id/employee_shirtnumber_textview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:background="#8D65FB"
+        android:gravity="center"
+        android:textColor="#3C1053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:src="@drawable/details_employee_gradient_background"/>
+
+    <!-- Layout that contains the text views -->
+    <LinearLayout
+        android:paddingBottom="25dp"
+        android:paddingLeft="25dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4B0078"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/linearLayoutCategory">
+
+
+        <TextView
+            android:paddingBottom="25dp"
+            android:id="@+id/employee_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pt_serif_bold"
+            android:gravity="left"
+            android:text="Text View 1"
+            android:textColor="@android:color/white"
+            android:textSize="29dp"
+            />
+    <LinearLayout
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/linearLayoutCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4B0078"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/employee_name_textview"
+        app:layout_constraintLeft_toLeftOf="@+id/employee_name_textview"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:fontFamily="@font/roboto"
+            android:id="@+id/employee_category_title"
+            android:layout_width="175dp"
+            android:layout_height="25dp"
+            android:gravity="left"
+            android:text="Categorie: "
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+        <TextView
+            android:fontFamily="@font/roboto_bold"
+            android:id="@+id/employee_category_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Text View 1"
+            android:textColor="#F2B751"
+            android:textSize="18sp"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/linearLayoutBirthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4B0078"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/employee_name_textview"
+        app:layout_constraintLeft_toLeftOf="@+id/employee_name_textview"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:fontFamily="@font/roboto"
+            android:id="@+id/employee_birthdate_title"
+            android:layout_width="175dp"
+            android:layout_height="25dp"
+            android:gravity="left"
+            android:text="Verjaardag: "
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+        <TextView
+            android:fontFamily="@font/roboto_bold"
+            android:id="@+id/employee_birthdate_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Text View 1"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/linearLayoutNationality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4B0078"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/employee_name_textview"
+        app:layout_constraintLeft_toLeftOf="@+id/employee_name_textview"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:fontFamily="@font/roboto"
+            android:id="@+id/employee_nationality_title"
+            android:layout_width="175dp"
+            android:layout_height="25dp"
+            android:gravity="left"
+            android:text="Nationaliteit: "
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+        <TextView
+            android:fontFamily="@font/roboto_bold"
+            android:id="@+id/employee_nationality_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Text View 1"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/linearLayoutStartdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4B0078"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/employee_name_textview"
+        app:layout_constraintLeft_toLeftOf="@+id/employee_name_textview"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:fontFamily="@font/roboto"
+            android:id="@+id/employee_startdate_title"
+            android:layout_width="175dp"
+            android:layout_height="25dp"
+            android:gravity="left"
+            android:text="Bij de club sinds: "
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+        <TextView
+            android:fontFamily="@font/roboto_bold"
+            android:id="@+id/employee_startdate_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Text View 1"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:gravity="center" />
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.marsphotos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/_024"
+        android:label="RSCA"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MarsPhotos">
+        <activity
+            android:name=".HomescreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MatchesActivity"
+            android:exported="false"
+            android:label="Matches" />
+        <activity
+            android:name=".Details_NewsArticle_Activity"
+            android:exported="false"
+            android:label="Nieuws &amp; Updates"
+            android:parentActivityName=".NewsActivity" />
+        <activity
+            android:name=".NewsActivity"
+            android:exported="false"
+            android:label="Nieuws &amp; Updates" />
+        <activity
+            android:name=".details_employee"
+            android:exported="false"
+            android:label="Team"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Team">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
