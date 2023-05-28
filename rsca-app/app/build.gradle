@@ -66,6 +66,9 @@ dependencies {
     // Coil
         implementation "io.coil-kt:coil:1.1.1"
 
+    // picasso to show images
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
     // Moshi
     implementation 'com.squareup.moshi:moshi-kotlin:1.13.0'
 

@@ -4,16 +4,225 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/home_activity_background_gradient"
     tools:context=".HomescreenActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/overviewFragment"
-        android:name="com.example.android.marsphotos.overview.News_OverviewFragment"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="380dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/article_image_imageview_homescreen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/image_placeholder" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_overlay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom">
+
+                <TextView
+
+                    android:id="@+id/publication_date_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="14sp"
+                    android:textColor="#F2B751"
+                    android:textAlignment="viewStart" />
+
+                <TextView
+                    android:id="@+id/title_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/pt_serif_bold"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!-- Add a horizontal line -->
+    <View
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/latestnews_fragment_overview" />
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/more_matches_link"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view" />
+
+
+    <LinearLayout
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/match_cardview"
+        android:id="@+id/more_matches_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            tools:text="Alle matches"
+            android:gravity="end"
+            android:textAllCaps="false"
+            android:id="@+id/more_matches_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Alle matches"
+            android:textColor="@color/white"
+            android:textSize="16dp"/>
+        <ImageView
+            android:id="@+id/more_matches_arrow_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/arrow_forward_right" />
+
+
+
+
+    </LinearLayout>
+            <!--    the match card-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/match_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="55dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#4B0078"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+
+        >
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/rectangle_background"
+            android:textAllCaps="true"
+            android:elevation="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+
+            android:textColor="#111111"
+            android:textSize="14sp" />
+        <LinearLayout
+
+            android:background="@drawable/card_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:focusable="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+
+
+                android:gravity="center_vertical"
+                android:id="@+id/home_team_icon"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/anderlecht_logo_vector" />
+
+            <LinearLayout
+
+                android:id="@+id/parent_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    tools:text="UEFA EUROPA CONFERENCE LEAGUE"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:id="@+id/league_text"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="UEFA EUROPA CONFERENCE LEAGUE"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
+                <TextView
+
+                    android:gravity="center_vertical"
+                    android:textSize="22dp"
+                    android:text="0 - 2"
+                    android:textColor="#F2B751"
+                    android:fontFamily="@font/pt_serif_bold"
+                    android:id="@+id/score_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+
+
+                android:gravity="center_vertical"
+                android:id="@+id/opponent_team_icon"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/anderlecht_logo_vector"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -29,4 +238,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
