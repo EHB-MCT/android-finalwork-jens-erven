@@ -18,19 +18,14 @@ package com.example.android.marsphotos
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.view.MenuItem
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 /**
  * MainActivity sets the content view activity_main, a fragment container that contains
  * overviewFragment.
  */
-class MainActivity : AppCompatActivity() {
+class TeamActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -44,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             bottomNavigation.setOnNavigationItemSelectedListener { menuItem ->
                 when (menuItem.itemId) {
                     R.id.menu_home -> {
-                        val intent = Intent(this@MainActivity, HomescreenActivity::class.java)
+                        val intent = Intent(this@TeamActivity, HomescreenActivity::class.java)
                         startActivity(intent)
                         // Handle Home button click
                         true
@@ -55,13 +50,13 @@ class MainActivity : AppCompatActivity() {
                         true
                     }
                     R.id.menu_news -> {
-                        val intent = Intent(this@MainActivity, NewsActivity::class.java)
+                        val intent = Intent(this@TeamActivity, NewsActivity::class.java)
                         startActivity(intent)
                         // Handle Notifications button click
                         true
                     }
                     R.id.menu_matches -> {
-                        val intent = Intent(this@MainActivity, MatchesActivity::class.java)
+                        val intent = Intent(this@TeamActivity, MatchesActivity::class.java)
                         startActivity(intent)
                         // Handle Profile button click
                         true

@@ -15,9 +15,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.w3c.dom.Text
 
-import android.widget.FrameLayout
 import android.widget.LinearLayout
 
 class HomescreenActivity : AppCompatActivity() {
@@ -105,7 +103,7 @@ class HomescreenActivity : AppCompatActivity() {
                     true
                 }
                 R.id.menu_team -> {
-                    val intent = Intent(this@HomescreenActivity, MainActivity::class.java)
+                    val intent = Intent(this@HomescreenActivity, TeamActivity::class.java)
                     startActivity(intent)
                     true
                 }

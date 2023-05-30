@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.marsphotos.R
 import com.example.android.marsphotos.databinding.GridViewItemBinding
-import com.example.android.marsphotos.details_employee
+import com.example.android.marsphotos.Details_TeamEmployee_Activity
 import com.example.android.marsphotos.network.Employee
 
 
@@ -39,7 +39,7 @@ class PhotoGridAdapter : ListAdapter<Employee,
         init {
             itemView.setOnClickListener {
                 val employee = binding.photo
-                val intent = Intent(itemView.context, details_employee::class.java).apply {
+                val intent = Intent(itemView.context, Details_TeamEmployee_Activity::class.java).apply {
                     putExtra("id", employee?.id)
                     putExtra("category", employee?.category)
                     putExtra("country", employee?.country)

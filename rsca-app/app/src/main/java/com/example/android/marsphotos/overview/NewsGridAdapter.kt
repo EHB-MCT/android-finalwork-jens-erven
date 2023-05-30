@@ -3,7 +3,6 @@ package com.example.android.marsphotos.overview
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,8 +10,6 @@ import com.example.android.marsphotos.Details_NewsArticle_Activity
 
 
 import com.example.android.marsphotos.databinding.NewsGridViewItemBinding
-import com.example.android.marsphotos.details_employee
-
 
 
 import com.example.android.marsphotos.network.NewsPhoto

@@ -3,8 +3,6 @@ package com.example.android.marsphotos
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class NewsActivity : AppCompatActivity() {
@@ -28,7 +26,7 @@ class NewsActivity : AppCompatActivity() {
                 }
                 R.id.menu_team -> {
 
-                    val intent = Intent(this@NewsActivity, MainActivity::class.java)
+                    val intent = Intent(this@NewsActivity, TeamActivity::class.java)
                     startActivity(intent)
                     true
                 }

@@ -105,8 +105,8 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:scaleType="centerCrop"
-            app:imageUrl="@{photo.outmatch ? null: photo.opponent_logo}"
-            android:src="@{photo.outmatch ? @drawable/anderlecht_logo_vector: null}"/>
+            app:imageUrl="@{photo.opponent_logo}"
+           />
     </LinearLayout>
 
     </androidx.cardview.widget.CardView>

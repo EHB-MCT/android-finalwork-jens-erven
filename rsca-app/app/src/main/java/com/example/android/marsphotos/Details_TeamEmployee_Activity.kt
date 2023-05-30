@@ -4,11 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.view.View
-import androidx.appcompat.widget.Toolbar
-import androidx.navigation.fragment.NavHostFragment
 import com.bumptech.glide.Glide
 
-class details_employee : AppCompatActivity() {
+class Details_TeamEmployee_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details_employee)

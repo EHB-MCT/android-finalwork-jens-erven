@@ -8,12 +8,13 @@
         android:allowBackup="true"
         android:icon="@drawable/_024"
         android:label="RSCA"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MarsPhotos">
         <activity
-            android:name=".HomescreenActivity"
-            android:exported="false" />
+            android:name=".TeamActivity"
+            android:exported="false"
+            android:label="Team"
+            />
         <activity
             android:name=".MatchesActivity"
             android:exported="false"
@@ -28,14 +29,14 @@
             android:exported="false"
             android:label="Nieuws &amp; Updates" />
         <activity
-            android:name=".details_employee"
+            android:name=".Details_TeamEmployee_Activity"
             android:exported="false"
             android:label="Team"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".TeamActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".HomescreenActivity"
             android:exported="true"
-            android:label="Team">
+            android:label="RSCA">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

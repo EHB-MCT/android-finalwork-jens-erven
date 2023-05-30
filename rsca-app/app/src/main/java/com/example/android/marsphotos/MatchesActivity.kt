@@ -3,10 +3,6 @@ package com.example.android.marsphotos
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.LinearLayout
-import com.example.android.marsphotos.network.MatchPhoto
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MatchesActivity : AppCompatActivity() {
@@ -27,7 +23,7 @@ class MatchesActivity : AppCompatActivity() {
                 }
                 R.id.menu_team -> {
 
-                    val intent = Intent(this@MatchesActivity, MainActivity::class.java)
+                    val intent = Intent(this@MatchesActivity, TeamActivity::class.java)
                     startActivity(intent)
                     true
                 }
